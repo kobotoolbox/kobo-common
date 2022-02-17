@@ -27,6 +27,7 @@ function checkVersion () {
 
     if ((hasAddedSrcFiles || hasModifiedSrcFiles) && !isPackageJsonModified) {
       console.error('You need to commit your package.json file with updated version!');
+      process.exit(1);
     }
 
     gtr.latest('git@github.com:kobotoolbox/kobo-common.git').then((response) => {
