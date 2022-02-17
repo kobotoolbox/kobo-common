@@ -1,8 +1,12 @@
 # kobo-common
 
-Small shareable resources for Kobo projects.
+A place to keep all non-complex files, for DRY purposes. We have:
 
-## Updating the contents of this packag
+- Our logo in different versions.
+- Our color palette.
+- Linter configs.
+
+## Updating the contents of this package
 
 We are relying on version tag heavily, so there are safety measures configured:
 
