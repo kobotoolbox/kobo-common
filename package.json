@@ -2,10 +2,6 @@
   "name": "kobo-common",
   "version": "1.0.0",
   "description": "Small shareable resources for Kobo projects.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kobotoolbox/kobo-common.git"
@@ -15,5 +11,15 @@
   "bugs": {
     "url": "https://github.com/kobotoolbox/kobo-common/issues"
   },
-  "homepage": "https://github.com/kobotoolbox/kobo-common#readme"
+  "homepage": "https://github.com/kobotoolbox/kobo-common#readme",
+  "scripts": {
+    "check-version": "node ./scripts/check-version.js"
+  },
+  "pre-commit": [
+    "check-version"
+  ],
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "staged-git-files": "^1.3.0"
+  }
 }
