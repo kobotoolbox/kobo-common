@@ -21,6 +21,14 @@ function checkVersion () {
 
     const proposedVersion = packageJsonData.version;
 
+    const isPackageJsonModified = results.find((result) => {
+      return result.filename === 'package.json';
+    });
+
+    if ((hasAddedSrcFiles || hasModifiedSrcFiles) && !isPackageJsonModified) {
+      console.error('You need to commit your package.json file with updated version!');
+    }
+
     gtr.latest('git@github.com:kobotoolbox/kobo-common.git').then((response) => {
       const latestVersion = response[0];
       const latestVersionArray = latestVersion.split('.');

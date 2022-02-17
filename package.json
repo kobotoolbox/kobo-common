@@ -1,6 +1,6 @@
 {
   "name": "kobo-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small shareable resources for Kobo projects.",
   "repository": {
     "type": "git",
@@ -13,13 +13,13 @@
   },
   "homepage": "https://github.com/kobotoolbox/kobo-common#readme",
   "scripts": {
-    "check-version": "node ./scripts/check-version.js"
+    "check-version": "node ./scripts/check-version.js && ./scripts/foo.js",
+    "prepare": "husky install"
   },
-  "pre-commit": [
-    "check-version"
-  ],
   "devDependencies": {
-    "pre-commit": "^1.2.2",
+    "git-tags-remote": "^1.0.5",
+    "husky": "^7.0.0",
+    "package-version-git-tag": "^3.0.0",
     "staged-git-files": "^1.3.0"
   }
 }
