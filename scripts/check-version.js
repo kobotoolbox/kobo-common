@@ -7,16 +7,25 @@ function checkVersion () {
 
   sgf((err, results) => {    
     // We want to check things:
-    // - if at least one file in `src` was modified, we expect the minor version bumped
+    // - if at least one file in `src` was modified (deleted), we expect the minor version bumped
     // - if at least one file in `src` was added, but none modified, we expect the patch version bumped
     // - if no file in `src` was changed in any way, we expect version to be untouched
+
+    console.log(results)
 
     const hasAddedSrcFiles = results.filter((result) => {
       return result.filename.startsWith('src/') && result.status === 'Added';
     }).length >= 1;
 
     const hasModifiedSrcFiles = results.filter((result) => {
-      return result.filename.startsWith('src/') && result.status === 'Modified';
+      return (
+        result.filename.startsWith('src/') &&
+        (
+          result.status === 'Modified' &&
+          result.status === 'Deleted' &&
+          result.status === 'Renamed'
+        )
+      );
     }).length >= 1;
 
     const proposedVersion = packageJsonData.version;
@@ -37,6 +46,7 @@ function checkVersion () {
       const expectedVersionArray = Array.from(latestVersionArray);
       if (hasModifiedSrcFiles) {
         expectedVersionArray[1] = String(parseInt(expectedVersionArray[1]) + 1);
+        expectedVersionArray[2] = String(0);
       } else if (hasAddedSrcFiles) {
         expectedVersionArray[2] = String(parseInt(expectedVersionArray[2]) + 1);
       }
