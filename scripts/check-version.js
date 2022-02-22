@@ -21,8 +21,8 @@ function checkVersion () {
       return (
         result.filename.startsWith('src/') &&
         (
-          result.status === 'Modified' &&
-          result.status === 'Deleted' &&
+          result.status === 'Modified' ||
+          result.status === 'Deleted' ||
           result.status === 'Renamed'
         )
       );
