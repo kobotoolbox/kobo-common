@@ -9,5 +9,5 @@ module.exports = {
   bracketSpacing: false,
   jsxBracketSameLine: false,
   arrowParens: 'always',
-  endOfLine: 'lf'
-}
+  endOfLine: 'lf',
+};

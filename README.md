@@ -6,7 +6,7 @@ A place to keep all non-complex files, for DRY purposes. We have:
 - Our color palette.
 - Linter configs.
 
-## Usage
+## Installation
 
 For a `npm` project, just add this line to your `devDependencies`:
 
@@ -19,6 +19,33 @@ To pick a correct version, please remember that:
 - `major` is not expected to change anytime soon
 - `minor` changes anytime an existing resource was modified
 - `patch` changes anytime a new resource was added
+
+## Usage
+
+For linter configs you need to extend the ones we have. You can simply create a file with one property:
+
+```js
+// .eslintrc.js
+module.exports = {
+  'extends': './node_modules/kobo-common/src/configs/.eslintrc.js'
+};
+```
+
+```js
+// .stylelintrc.js
+module.exports = {
+  'extends': './node_modules/kobo-common/src/configs/.stylelintrc.js'
+};
+```
+
+```js
+// .prettierrc.js
+module.exports = {
+  ...require('./node_modules/kobo-common/src/configs/.prettierrc.js')
+};
+```
+
+For `.editorconfig` unfortunately [there is no easy way](https://github.com/editorconfig/editorconfig/issues/236). You can either create a `postinstall` script that would copy it to your repo root, or just copy&paste the content manually.
 
 ## Updating the contents of this package
 
