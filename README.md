@@ -53,7 +53,7 @@ For `.editorconfig` unfortunately [there is no easy way](https://github.com/edit
 
 ### Styles
 
-The color palette file requires few things:
+The color palette file requires a relative path to work, e.g. `@use "../../node_modules/kobo-common/src/styles/colors";`, but to make it easier for you, try using these steps instead:
 
 1. Adding the package to `load-paths` like so: `--load-path=node_modules/kobo-common/src/styles`
 2. Referencing it in your file: `@use "colors";`
