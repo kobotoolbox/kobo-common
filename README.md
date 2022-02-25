@@ -11,7 +11,7 @@ A place to keep all non-complex files, for DRY purposes. We have:
 For a `npm` project, just add this line to your `devDependencies`:
 
 ```
-"kobo-common": "https://github.com/kobotoolbox/kobo-common.git#semver:1.2.3",
+"kobo-common": "git@github.com:kobotoolbox/kobo-common.git#semver:1.2.3",
 ```
 
 To pick a correct version, please remember that:
@@ -20,7 +20,11 @@ To pick a correct version, please remember that:
 - `minor` changes anytime an existing resource was modified
 - `patch` changes anytime a new resource was added
 
+Depending on your setup you might need to use `HTTPS` url instead: `https://github.com/kobotoolbox/kobo-common.git`.
+
 ## Usage
+
+### Linting
 
 For linter configs you need to extend the ones we have. You can simply create a file with one property:
 
@@ -46,6 +50,14 @@ module.exports = {
 ```
 
 For `.editorconfig` unfortunately [there is no easy way](https://github.com/editorconfig/editorconfig/issues/236). You can either create a `postinstall` script that would copy it to your repo root, or just copy&paste the content manually.
+
+### Styles
+
+The color palette file requires few things:
+
+1. Adding the package to `load-paths` like so: `--load-path=node_modules/kobo-common/src/styles`
+2. Referencing it in your file: `@use "colors";`
+3. Using the variable: `color: colors.$kobo-blue;`
 
 ## Updating the contents of this package
 
