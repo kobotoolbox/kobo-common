@@ -60,13 +60,13 @@ module.exports = {
       },
     ],
     'block-opening-brace-space-after': [
-      'always-single-line',
+      'never',
       {
         severity: 'warning',
       },
     ],
     'block-opening-brace-space-before': [
-      'always',
+      'never',
       {
         severity: 'warning',
       },
