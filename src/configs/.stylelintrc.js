@@ -48,7 +48,7 @@ module.exports = {
       },
     ],
     'block-closing-brace-space-before': [
-      'always-single-line',
+      'never-single-line',
       {
         severity: 'warning',
       },
@@ -60,13 +60,13 @@ module.exports = {
       },
     ],
     'block-opening-brace-space-after': [
-      'never',
+      'never-single-line',
       {
         severity: 'warning',
       },
     ],
     'block-opening-brace-space-before': [
-      'never',
+      'always',
       {
         severity: 'warning',
       },
