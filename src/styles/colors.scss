@@ -43,24 +43,22 @@ $kobo-white: hsl(225deg 16% 100%); // #ffffff
  * Primary colours & shades
  */
 
+$kobo-dark-blue: hsl(206deg 90% 31%); // #00599d
 $kobo-blue: hsl(206deg 90% 55%); // # 2095f3
 $kobo-alt-blue: hsl(206deg 100% 71%); // #64c0ff
-$kobo-mid-blue: hsl(206deg 85% 80%); // #a1d2f7
-$kobo-pastel-blue: hsl(206deg 100% 88%); // #c0e3ff
+$kobo-mid-blue: hsl(206deg 100% 88%); // #c0e3ff
 $kobo-light-blue: hsl(206deg 100% 95%); // #e8f4ff
-$kobo-dark-blue: hsl(206deg 90% 31%); // #00599d
-$kobo-background-blue: hsla(206deg 100% 95%); // #e8f4ff
 
-$kobo-teal: hsl(185deg 57% 57%); // #52c5d0
 $kobo-dark-teal: hsl(185deg 61% 28%); // #1c6d74
+$kobo-teal: hsl(185deg 57% 57%); // #52c5d0
 $kobo-light-teal: hsl(185deg 56% 89%); // #d4f0f3
 
 /*
  * Secondary & tertiary colors
  */
 
-$kobo-red: hsl(352deg 100% 70%); // #fe6b7d
 $kobo-dark-red: hsl(352deg 30% 44%); // #924f58
+$kobo-red: hsl(352deg 100% 70%); // #fe6b7d
 $kobo-light-red: hsl(352deg 100% 92%); // #ffd5da
 
 $kobo-dark-amber: hsl(30deg 20% 35%); // #6c5a49
