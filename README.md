@@ -31,25 +31,27 @@ For linter configs you need to extend the ones we have. You can simply create a 
 ```js
 // .eslintrc.js
 module.exports = {
-  'extends': './node_modules/kobo-common/src/configs/.eslintrc.js'
+  'extends': './node_modules/kobo-common/src/configs/.eslintrc.js',
 };
 ```
 
 ```js
 // .stylelintrc.js
 module.exports = {
-  'extends': './node_modules/kobo-common/src/configs/.stylelintrc.js'
+  'extends': './node_modules/kobo-common/src/configs/.stylelintrc.js',
 };
 ```
 
 ```js
 // .prettierrc.js
 module.exports = {
-  ...require('./node_modules/kobo-common/src/configs/.prettierrc.js')
+  ...require('./node_modules/kobo-common/src/configs/.prettierrc.js'),
 };
 ```
 
 For `.editorconfig` unfortunately [there is no easy way](https://github.com/editorconfig/editorconfig/issues/236). You can either create a `postinstall` script that would copy it to your repo root, or just copy&paste the content manually.
+
+NOTE: you might need to install `@typescript-eslint/parser` from `peerDependencies` in your project to enable linting.
 
 ### Styles
 
