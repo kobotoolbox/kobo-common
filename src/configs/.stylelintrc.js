@@ -107,8 +107,13 @@ module.exports = {
         severity: 'warning',
       },
     ],
-    'declaration-block-no-redundant-longhand-properties': false,
-    'declaration-block-no-shorthand-property-overrides': true,
+    'declaration-block-no-redundant-longhand-properties': 'off',
+    'declaration-block-no-shorthand-property-overrides': [
+      true,
+      {
+        severity: 'warning',
+      },
+    ],
     'declaration-bang-space-after': [
       'never',
       {
