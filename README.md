@@ -31,14 +31,14 @@ For linter configs you need to extend the ones we have. You can simply create a 
 ```js
 // .eslintrc.js
 module.exports = {
-  'extends': './node_modules/kobo-common/src/configs/.eslintrc.js',
+  extends: './node_modules/kobo-common/src/configs/.eslintrc.js',
 };
 ```
 
 ```js
 // .stylelintrc.js
 module.exports = {
-  'extends': './node_modules/kobo-common/src/configs/.stylelintrc.js',
+  extends: './node_modules/kobo-common/src/configs/.stylelintrc.js',
 };
 ```
 
