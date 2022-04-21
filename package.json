@@ -1,6 +1,6 @@
 {
   "name": "kobo-common",
-  "version": "1.15.1",
+  "version": "1.16.0",
   "description": "Small shareable resources for Kobo projects.",
   "repository": {
     "type": "git",
