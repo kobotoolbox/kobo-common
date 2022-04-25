@@ -77,6 +77,7 @@ const tsRules = Object.assign({}, jsRules, {
   '@typescript-eslint/array-type': [1, {default: 'array-simple'}],
   // Would be good to enable in future, when most of codebase is TS.
   '@typescript-eslint/ban-types': 'off',
+  '@typescript-eslint/ban-ts-comment': 1,
   '@typescript-eslint/comma-dangle': [1, 'always-multiline'],
   '@typescript-eslint/comma-spacing': [1, {before: false, after: true}],
   '@typescript-eslint/consistent-type-definitions': [1, 'interface'],
