@@ -47,6 +47,7 @@ const jsRules = {
   'no-whitespace-before-property': 1,
   'one-var': ['warn', 'never'],
   'prefer-const': 1,
+  'prefer-rest-params': 1,
   'prefer-spread': 1,
   quotes: ['warn', 'single', {avoidEscape: true}],
   'react/jsx-boolean-value': 1,
