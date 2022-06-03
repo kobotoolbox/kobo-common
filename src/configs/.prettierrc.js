@@ -10,4 +10,15 @@ module.exports = {
   jsxBracketSameLine: false,
   arrowParens: 'always',
   endOfLine: 'lf',
+  overrides: [
+    {
+      // Markdown configuration is mainly for our docs project (i.e. support.kobotoolbox.org)
+      files: 'source/*.md',
+      options: {
+        parser: 'markdown',
+        printWidth: 80,
+        proseWrap: 'always'
+      }
+    }
+  ]
 };
