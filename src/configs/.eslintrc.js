@@ -205,6 +205,11 @@ module.exports = {
   plugins: ['react'],
   extends: ['eslint:recommended', 'prettier'],
   rules: jsRules,
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
