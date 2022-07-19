@@ -382,7 +382,10 @@ module.exports = {
       },
     ],
     'selector-class-pattern': [
-      '^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
+      // NOTE: this regex is still not working correctly, as it matches some
+      // non-BEM selectors, e.g. `.a_b_c`. It is better than previous one, and
+      // works correctly with our codebase though, so it is Good Enough™.
+      '^([a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$',
       {
         message: 'Expected BEM class',
         severity: 'warning',
