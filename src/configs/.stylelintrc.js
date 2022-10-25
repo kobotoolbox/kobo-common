@@ -381,6 +381,7 @@ module.exports = {
         severity: 'warning',
       },
     ],
+    'scss/operator-no-newline-before': false,
     'selector-class-pattern': [
       // NOTE: this regex is still not working correctly, as it matches some
       // non-BEM selectors, e.g. `.a_b_c`. It is better than previous one, and
