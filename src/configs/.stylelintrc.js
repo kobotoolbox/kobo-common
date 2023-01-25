@@ -107,7 +107,7 @@ module.exports = {
         severity: 'warning',
       },
     ],
-    'declaration-block-no-redundant-longhand-properties': 'off',
+    'declaration-block-no-redundant-longhand-properties': null,
     'declaration-block-no-shorthand-property-overrides': [
       true,
       {
@@ -381,7 +381,8 @@ module.exports = {
         severity: 'warning',
       },
     ],
-    'scss/operator-no-newline-before': false,
+    'scss/operator-no-newline-before': null,
+    'scss/at-import-partial-extension': null, // we use "." in our filenames
     'selector-class-pattern': [
       // NOTE: this regex is still not working correctly, as it matches some
       // non-BEM selectors, e.g. `.a_b_c`. It is better than previous one, and

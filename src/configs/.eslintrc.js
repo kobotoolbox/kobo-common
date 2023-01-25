@@ -152,7 +152,7 @@ const tsRules = Object.assign({}, jsRules, {
     {
       anonymous: 'always',
       named: 'never',
-      asyncArrow: 'never',
+      asyncArrow: 'always', // TODO: Defer all formatting rules to Prettier
     },
   ],
   '@typescript-eslint/type-annotation-spacing': [
