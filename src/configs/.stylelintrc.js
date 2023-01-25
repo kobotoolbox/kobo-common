@@ -326,18 +326,12 @@ module.exports = {
         severity: 'warning',
       },
     ],
-    'no-eol-whitespace': [
-      true,
-      {
-        severity: 'warning',
-      },
-    ],
-    'no-missing-end-of-source-newline': [
-      true,
-      {
-        severity: 'warning',
-      },
-    ],
+    // don't show warnings. trust editorconfig to:
+    //  - trim end-of-line whitespace
+    //  - ensure end-of-file newline
+    'no-eol-whitespace': null,
+    'no-missing-end-of-source-newline': null,
+
     'no-invalid-double-slash-comments': [
       true,
       {
@@ -380,6 +374,8 @@ module.exports = {
     'scss/at-import-partial-extension': null,
     // allow group lists of variables with empty lines as separators
     'scss/dollar-variable-empty-line-before': null,
+    // same as comment-empty-line-before
+    'scss/double-slash-comment-empty-line-before': null,
     'scss/operator-no-newline-before': null,
     'selector-class-pattern': null,
     'selector-pseudo-class-no-unknown': true,
