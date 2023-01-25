@@ -79,14 +79,7 @@ module.exports = {
       },
     ],
     'comment-no-empty': true,
-    'comment-empty-line-before': [
-      'always',
-      {
-        except: ['first-nested'],
-        ignore: ['stylelint-commands'],
-        severity: 'warning',
-      },
-    ],
+    'comment-empty-line-before': null,
     'comment-whitespace-inside': [
       'always',
       {
@@ -317,6 +310,8 @@ module.exports = {
         severity: 'warning',
       },
     ],
+    // somewhat useful, yet often frivolous. removing for now.
+    'no-descending-specificity': null,
     'no-duplicate-at-import-rules': true,
     'no-duplicate-selectors': [
       true,
@@ -381,18 +376,12 @@ module.exports = {
         severity: 'warning',
       },
     ],
+    // allows files like "badge.module.scss"
+    'scss/at-import-partial-extension': null,
+    // allow group lists of variables with empty lines as separators
+    'scss/dollar-variable-empty-line-before': null,
     'scss/operator-no-newline-before': null,
-    'scss/at-import-partial-extension': null, // we use "." in our filenames
-    'selector-class-pattern': [
-      // NOTE: this regex is still not working correctly, as it matches some
-      // non-BEM selectors, e.g. `.a_b_c`. It is better than previous one, and
-      // works correctly with our codebase though, so it is Good Enough™.
-      '^([a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$',
-      {
-        message: 'Expected BEM class',
-        severity: 'warning',
-      },
-    ],
+    'selector-class-pattern': null,
     'selector-pseudo-class-no-unknown': true,
     'selector-pseudo-element-no-unknown': true,
     'selector-type-no-unknown': true,
