@@ -2,14 +2,7 @@ module.exports = {
   extends: 'stylelint-config-standard-scss',
   defaultSeverity: 'warning',
   rules: {
-    'at-rule-empty-line-before': [
-      'always',
-      {
-        except: ['blockless-after-same-name-blockless', 'first-nested'],
-        ignore: ['after-comment'],
-        severity: 'warning',
-      },
-    ],
+    'at-rule-empty-line-before': null,
     'at-rule-name-case': [
       'lower',
       {
@@ -86,14 +79,7 @@ module.exports = {
         severity: 'warning',
       },
     ],
-    'custom-property-empty-line-before': [
-      'always',
-      {
-        except: ['after-custom-property', 'first-nested'],
-        ignore: ['after-comment', 'inside-single-line-block'],
-        severity: 'warning',
-      },
-    ],
+    'custom-property-empty-line-before': null,
     'declaration-block-no-duplicate-properties': [
       true,
       {
@@ -167,14 +153,7 @@ module.exports = {
         severity: 'warning',
       },
     ],
-    'declaration-empty-line-before': [
-      'always',
-      {
-        except: ['after-declaration', 'first-nested'],
-        ignore: ['after-comment', 'inside-single-line-block'],
-        severity: 'warning',
-      },
-    ],
+    'declaration-empty-line-before': null,
     'font-family-no-duplicate-names': true,
     'font-family-no-missing-generic-family-keyword': [
       true,
