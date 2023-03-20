@@ -146,7 +146,7 @@ const tsRules = Object.assign({}, jsRules, {
   '@typescript-eslint/prefer-optional-chain': 1,
   '@typescript-eslint/quotes': ['warn', 'single', {avoidEscape: true}],
   '@typescript-eslint/semi': 1,
-  '@typescript-eslint/sort-type-union-intersection-members': 1,
+  '@typescript-eslint/sort-type-union-intersection-members': 'off',
   '@typescript-eslint/space-before-function-paren': [
     1,
     {
