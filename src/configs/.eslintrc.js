@@ -99,7 +99,7 @@ const tsRules = Object.assign({}, jsRules, {
       selector: 'variableLike',
       format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
     },
-    {selector: 'memberLike', format: ['camelCase', 'PascalCase']},
+    {selector: 'memberLike', format: ['camelCase', 'PascalCase', 'snake_case']},
     {selector: 'typeLike', format: ['PascalCase']},
     {
       selector: 'property',
